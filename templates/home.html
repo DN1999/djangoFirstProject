@@ -1,0 +1,16 @@
+
+{% extends 'base.html' %}
+
+{%  block content%}
+        <h1>Jay Shree Krihsna {{name}}...!</h1>
+
+        <form action="add" method='post'>
+            
+            {% csrf_token %}
+            
+            Enter first Number : <input type="text" name="num1"><br>
+            Enter Second Number : <input type="text" name="num2"><br>
+            <input type="submit">
+        </form>
+ 
+    {% endblock %} 

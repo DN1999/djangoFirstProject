@@ -1,0 +1,30 @@
+{% extends 'stud/stud.html'%}
+    {% block content%}
+
+
+
+   <!-- Start Table Section -->
+        <!-- Code for Show student Register Details -->
+        <div class="table table-bordered table-hover mt-5">
+            <h3 style="text-align: center;">Student Record</h3>
+            {% if error_message %}
+            <div class="alert alert-danger" role="alert">
+                {{ error_message }}
+            </div>
+            {% else %}
+            <div class="table-responsive">
+                <p style="margin-left:87%; margin-bottom: -2.7%;">
+                    <a class="btn btn-success" href="/addStudentPage">Add</a>
+                    <a class="btn btn-success" href="/updateStudentPage">Update</a>    
+                </p>
+               <!-- <p style="margin-left:5%; margin-bottom: -2.7%;"></p> -->
+                {{ excel_html|safe }}
+                
+            </div>
+            {% endif %}
+        </div>       
+    <!--End Table Section  -->
+
+
+
+    {% endblock%}

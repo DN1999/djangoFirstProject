@@ -1,0 +1,169 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student</title>
+    <!-- Include Bootstrap CSS for table styling -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<style>
+    
+header{
+        display: block;
+         height:100px; 
+         background-color: rgb(3, 24, 24);
+         color: white;
+         margin: 1%;
+}
+
+header h1{
+    margin-left: 40%;
+    color: aqua;
+}
+.header_ul{
+    display: flex;
+    position: sticky;
+}
+.header_ul li{
+    margin-left: 2%;
+    
+}
+
+.mid_block{
+    background-color: rgb(201, 199, 196);
+    width: 96%;
+    height: 100%;
+   margin: 1%;
+   margin-top: .2%; 
+   padding: 1%;  
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+.container {
+    max-width: 500px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h2 {
+    text-align: center;
+}
+form {
+    margin-top: 20px;
+}
+.form-group {
+    margin-bottom: 20px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.form-group input[type="text"], .form-group input[type="email"], .form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+.form-group input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    cursor: pointer;
+}
+.form-group input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+table {
+    width: 80%;
+    margin: 50px auto;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+th, td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+th {
+    background-color: #007bff;
+    color: #fff;
+}
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+tr:hover {
+    background-color: #ddd;
+}
+
+
+footer {
+    background-color: #040303;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 96%;
+    color: #f2f2f2;
+    margin: 1%;
+    margin-right:1%;
+}
+</style>
+</head>
+<body bgcolor="redvellvet">
+    
+    <header >
+         <h1>Student Portal</h1>
+         <ul  class="header_ul">
+            <li><a href="/">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="/student">Student</a></li>
+         </ul>
+    </header>
+    <!-- <h1>Jay Shree Krihsna {{name}}...!</h1> -->
+  
+    <div class="mid_block">
+     <!-- <h1>Mid Block</h1> -->
+     {% block content %}
+        
+     {% endblock %}
+    </div>
+   
+
+    <!-- Footer Section -->
+    <footer class="footer mt-auto py-3">
+        <!-- <div class="container"> -->
+            <!-- <span class="text-muted">Place sticky footer content here.</span> -->
+        <!-- </div> -->
+        <div style="margin-left: 2%; " class="mt-5">
+            <h3>Studdent Portals ...</h3>
+            <p>The portal for students. student can get the information about all the noticed and importanat instruction here</p>
+        </div>
+     <div style="text-align: center;">
+        <p>email :<a href="#"> dhananjaypnaphade@gmail.com </a></p>
+        <p>@copyright by DJ 2024</p>
+     </div>
+
+        
+    </footer>
+
+    <!-- Include Bootstrap JS for table responsiveness (optional) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+

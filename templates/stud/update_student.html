@@ -1,0 +1,62 @@
+{% extends 'stud/stud.html'%}
+    {% block content%}
+
+
+        <div class="container">
+            <p style="color: green; text-align: center;">{{result}}</p>
+            <h2> Update Student Record</h2>
+            <form action="searchStudent" method="post">
+                {% csrf_token  %}
+                <div class="form-group">
+                <label for="srno" style="margin-left:30%">Sr. NO:  
+                    <input type="text" id="srno" name="srno" style="width: 20%;" value="{{res_srno}}"required>
+                    <!-- <a class="btn btn-primary" href="searchStudent" id="search">Search</a>  -->
+                    <input class="btn btn-primary" type="submit" value="Search" style="width: 20%;">
+
+                </label>
+                    <!-- <input type="submit" value="searchStudent"> -->
+                </div>
+           </form>   
+            <form action="updateStudent" method="post">
+                {% csrf_token  %}
+               <input type="text" id="srno" name="srno" value="{{res_srno}}" required hidden>
+            <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" value="{{res_name}}"required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" value="{{res_email}}" required>
+                </div>
+                <div class="form-group">
+                    <label for="gender">Gender:</label>
+                    <select id="gender" name="gender">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                <script>
+                    document.addEventListener("DOMContentLoaded", function() {
+                   
+                     var gender="{{res_gender}}";
+                    //var gender="female"; 
+                    if(gender==="male")
+                        document.getElementById('gender').value="male";
+                    else if(gender==="female")
+                        document.getElementById('gender').value="female";
+                    else if(gender==="other")
+                        document.getElementById('gender').value="other";
+                    else 
+                        document.getElementById('gender').value="male";
+                      
+                });
+                </script>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="updateStudent">
+                    <p class="mt-2" style="width: 20%; margin-left:45%"><a href="student">Back</a></p>
+                </div>
+            </form>
+        </div>
+
+    {% endblock%}
